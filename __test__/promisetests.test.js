@@ -50,6 +50,7 @@ describe('testing with key licence to reject', ()=>{
     })
 });
 
+// these two are better practices, above are just different ways
 describe('testing models',()=>{
     test('search model "Bored T-model"',()=>{
         return expect(search('model',"Bored T-model")).resolves.toEqual([

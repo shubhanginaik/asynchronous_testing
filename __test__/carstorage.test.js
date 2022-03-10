@@ -5,9 +5,9 @@ const search = require('../carstorageCallbackLast');
 
 describe('testing callback',()=>{
     test('search with licence ABC-1',done=>{
-        function cb(data){
+        function cb(data){ //here cb(data) is cbf(found)data which we are comparing with expected value.
             try{
-                expect(data).toEqual([{"model":"Bored T-model", "licence":"ABC-1"}])
+                expect(data).toEqual([{"model":"Bored T-model", "licence":"ABC-1"}]);
                 done();
             }catch(err){
                 done(err);
@@ -33,7 +33,7 @@ describe('test callback with testEach',()=>{
         ]],
         ['licence','B-1',[{"model":"XGT", "licence":"B-1"}]]
     ];
-    
+
     test.each(testValues)('%s, %s',(key,value,expected,done)=>{
         function cb(data){
             try{
