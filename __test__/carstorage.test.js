@@ -33,6 +33,7 @@ describe('test callback with testEach',()=>{
         ]],
         ['licence','B-1',[{"model":"XGT", "licence":"B-1"}]]
     ];
+    
     test.each(testValues)('%s, %s',(key,value,expected,done)=>{
         function cb(data){
             try{
